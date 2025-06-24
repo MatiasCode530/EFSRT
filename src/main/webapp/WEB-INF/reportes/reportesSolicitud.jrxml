@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportesSolicitud" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="13acf49e-4913-4d1b-bccc-113817ad15d1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idSolicitud" class="java.lang.Integer"/>
+	<field name="reporteVehiculo" class="java.lang.String"/>
+	<field name="reporteNumero" class="java.lang.String"/>
+	<field name="reporteHora" class="java.lang.String"/>
+	<field name="reportefechaReserva" class="java.lang.String"/>
+	<field name="reporteEstado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000" uuid="6c6ca4e1-17cd-4913-93d6-5e670ea9ae8a"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="370" height="66" uuid="a2a2cac8-5a7d-4487-8c54-dab235ce4e21"/>
+					<textElement>
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Reportes]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="157" y="66" width="249" height="29" uuid="8978eac3-c578-41c9-837e-48d2b0184642"/>
+					<textElement>
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Solicitud Ingreso Y Salida]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000" uuid="e3c14156-5b51-4201-918b-97fdc012e5d4"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="307" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="5c3301e7-a737-4c59-8a2f-a6c79fd1adb8"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="80" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="9c5f5540-f901-4be8-b767-ec8e4d6251d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dec6b6a6-a0d2-4d3d-872b-c1463ee87a9b"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="70" y="0" width="120" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="cd756d9d-b50d-4918-9a58-444694eeb7b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="605b3b60-d60a-471e-840b-477b9e4b66d1"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Vehiculo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="110" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="1c45a20f-9824-4fc1-a193-f297d6ac17b7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd847ad8-1910-4229-b1f7-5e0e2fe2d8bd"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Numero de Espacio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="0" width="80" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="d2f8a66d-2da7-4f00-b165-d471d70e97c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9f57fe70-133f-4a9e-bc98-1ba8b4edc589"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="360" y="0" width="91" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="46f86419-c101-4030-90da-94c2ee5616ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc9e0103-42da-463e-b046-d8a11e14d672"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Fecha Reserva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="451" y="0" width="80" height="26" forecolor="#FFFFFF" backcolor="#050000" uuid="ad722f4b-4629-43ed-8163-46915a0be84f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20edc97c-88f6-40bf-9720-33930e318075"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="13" width="60" height="30" uuid="a9fac5ef-8695-4999-b36d-b4a84264d003">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dec6b6a6-a0d2-4d3d-872b-c1463ee87a9b"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{idSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="13" width="100" height="30" uuid="d51e6fc1-c00b-4ad2-8700-cddd58a067c3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="605b3b60-d60a-471e-840b-477b9e4b66d1"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reporteVehiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="13" width="90" height="30" uuid="9c52948e-c491-49a1-a8df-10d21945c608">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dd847ad8-1910-4229-b1f7-5e0e2fe2d8bd"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reporteNumero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="13" width="60" height="30" uuid="6d4e97f6-60b2-4507-b1b4-a19b1bf56fd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9f57fe70-133f-4a9e-bc98-1ba8b4edc589"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reporteHora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="13" width="81" height="30" uuid="1742c7e4-0f8d-44be-9f5f-db674959ba47">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc9e0103-42da-463e-b046-d8a11e14d672"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reportefechaReserva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="13" width="80" height="30" uuid="0ea6a695-9fb8-4dac-b793-2e4a53b829b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="20edc97c-88f6-40bf-9720-33930e318075"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{reporteEstado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="1133a906-5b71-476e-9f3e-bc97c97058c1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" uuid="729c3539-f946-4d0e-a0a7-bda2815ea1b0"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="4834e99c-7f6c-485a-b098-50e5187f2ab4"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="9825b46e-76f1-469a-abb8-a1cc27aad685"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="137d38c7-1a83-4fc5-b156-9d5f1b1a0ddc"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
